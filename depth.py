@@ -71,6 +71,11 @@ def process_folder(input_folder_path, output_folder_path, transform):
             process_folder(item.path, subfolder_output_path, transform)
 
 
+"""
+Example usage:
+python depth.py "input_folder" "output_folder"
+"""
+
 if __name__ == "__main__":
     # Check that the correct number of arguments have been provided
     if len(sys.argv) != 3:

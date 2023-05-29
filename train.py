@@ -136,10 +136,10 @@ def main():
 
         if config.SAVE_MODEL and epoch % 1 == 0:
             save_checkpoint(
-                gen, opt_gen, filename=str("gen_" + str(epoch) + ".pth.tar")
+                gen, opt_gen, epoch, filename=str("gen_" + str(epoch) + ".pth.tar")
             )
             save_checkpoint(
-                disc, opt_disc, filename=str("disc_" + str(epoch) + ".pth.tar")
+                disc, opt_disc, epoch, filename=str("disc_" + str(epoch) + ".pth.tar")
             )
 
         save_some_examples(gen, val_loader, epoch, folder="evaluation")

@@ -19,9 +19,10 @@ def save_some_examples(gen, val_loader, epoch, folder):
     gen.train()
 
 
-def save_checkpoint(model, optimizer, filename="my_checkpoint.pth.tar"):
+def save_checkpoint(model, optimizer, epoch, filename="my_checkpoint.pth.tar"):
     print("=> Saving checkpoint")
     checkpoint = {
+        "epoch": epoch,
         "state_dict": model.state_dict(),
         "optimizer": optimizer.state_dict(),
     }

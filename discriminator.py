@@ -68,11 +68,3 @@ class Discriminator(nn.Module):
         x = torch.cat([x, y], dim=1)
         x = self.initial(x)
         return self.model(x)
-
-
-def test():
-    x = torch.randn((1, 3, 256, 256))
-    y = torch.randn((1, 3, 256, 256))
-    model = Discriminator()
-    preds = model(x, y)
-    print(preds.shape)
